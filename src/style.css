@@ -8,16 +8,34 @@ html {
   font-size: 62.5%;
 }
 
+html,body{
+  overflow-x: hidden;
+  width: 100%;
+}
+
 :root {
   --primary-color: #95adbe;
+  --background-color: #007BFF;
   --secondary-color: #ff7a5c;
   --color-black: #000000;
   --color-black-dark: #1a1a1a;
+  --color-black-strong: #333333;
   --color-black-light: #999999;
   --color-white: #ffffff;
-  --color-white-light: #f5f5f0;
+  --color-bright-white: #FFFFFF;
+  --color-white-light: #030303;
+  --color-white-cream: #F5F4F0;
+  --color-grey-bright: #F7F7F7;
+  --color-grey-dark: #E6E6E6;
+  --color-green: #25D366;
+  --color-brown: #C5875D;
+  --color-grey: #555555;
+  --color-grey-light: #555;
+  --color-grey-dim: #ccc;
+  --color-blue: #009CB8;
   --primary-font: "Lora", serif;
   --secondary-font: "Roboto", serif;
+  --font-secondary: "Libre Baskerville", serif;
 }
 
 /* Home Stylings */
@@ -60,10 +78,1091 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-bright-white);
   font-family: var(--secondary-font);
   font-weight: 600;
   font-size: 1.5rem;
 }
 
+/* Hero section */
+.hero-content {
+  text-align: center;
+  margin-top: 14.5rem;
+}
+
+.hero-content h1 {
+  font-size: 5.5rem;
+  color: var(--color-white);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
+
+.search-bar {
+  margin-top: 0;
+}
+
+.search-bar input {
+  padding: 3rem;
+  padding-left: 1rem;
+  margin-right: .5rem;
+  width: 16rem;
+  height: 5.1rem;
+  border: .1rem solid var(--color-black-light);
+  border-radius: .8rem;
+  margin-left: .7rem;
+  font-size: 1.4rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+input.check-in {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: -2rem;
+  color: var(--color-black-light);
+}
+
+input.check-out {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: var(--color-black-light);
+}
+
+input.guest{
+  padding-left: 4rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--color-black-dark);
+  width: 14rem;
+}
+
+i.fa-solid.fa-magnifying-glass{
+  color: currentColor;
+  font-size: 1.8rem;
+  padding-right: .4rem;
+  margin-left: -3rem;
+}
+
+.search-bar button {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: var(--background-color);
+  color: var(--color-bright-white);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  width: 13.5rem;
+  height: 5.2rem;
+  border-radius: 3rem;
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Hero Responsiveness */
+@media (max-width: 74.125em) {
+  .hero-content {
+    text-align: center;
+    margin-top: 40rem;
+    width: fit-content;
+  }
+
+}
+
+@media (max-width: 63.875em) {
+    .nav-links ul {
+      gap: 4rem;
+      padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 57.375em) {
+  .nav-links ul {
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 51.125em) {
+  .home{
+    height: auto;
+  }
+}
+@media (max-width: 50.625em) {
+  .nav-links ul {
+    gap: .5rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 46.375em) {
+  .nav-logo {
+margin-left: -2rem;
+width: 4rem;
+  }
+}
+@media (max-width: 46.375em) {
+  .nav-logo {
+margin-left: -2rem;
+width: 4rem;
+  }
+}
+@media (max-width: 44.875em) {
+  .nav-logo {
+    display: none;
+  }
+  .header-content {
+    padding-left: 7rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links ul {
+    gap: .8rem;
+  }
+}
+
+@media (max-width: 32.375em) {
+  .header-content {
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 /* End of Home Stylings */
+
+/* About Section Stylings*/
+.about {
+  padding: 2rem 1rem;
+  margin: 4.5rem 0rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 16rem;
+}
+
+.icon {
+  width: 20rem;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: 90rem;
+  margin-top: -3rem;
+  margin-right: 90rem;
+  padding-top: -4rem;
+}
+
+.tagline {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  color: var(--color-brown); 
+  font-weight: 500;
+  margin-top: -10rem;
+  margin-bottom: 2rem; 
+  padding-left: 6rem; 
+}
+
+h1.tagline-title {
+  font-size: 5rem;
+  font-weight: 505;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+  font-family: var(--font-secondary);
+  margin-top: -4.5rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  line-height: 1.8;
+  color: var(--color-grey);
+  margin-bottom: 5rem;
+}
+
+.divider {
+  border: 0;
+  height: .1rem;
+  background: var(--color-grey-light);
+  width: 95%;
+}
+/* About Responsiveness */
+@media (max-width: 79.875em) {
+  .container {
+    margin: 0 3rem;
+  }
+}
+@media (max-width: 27.875em) {
+  .container {
+    margin: 0 1rem;
+  }
+}
+/* End of About Section */
+
+/* Recreational Services */
+.recreational-section {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.recreational-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 12rem;
+  margin-right: 3rem;
+  padding-right: 1rem;
+  flex-direction: row;
+}
+
+.recreational-images-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recreational-images-container img {
+  width: 32rem;
+  height: 19rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+img.recreational-image.swimming {
+  position: relative;
+  bottom: 11.3rem;
+  left: -13rem;
+}
+
+img.recreational-image.gym {
+  position: absolute;
+  bottom: .7rem;
+  left: .5rem;
+  z-index: 1;
+}
+.recreational-text-container {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70rem;
+  padding-left: 0.5rem;
+  margin-right: -14rem;
+  padding-right: 11rem;
+}
+.recreational-text {
+  padding-top: 0;
+  justify-items: left;
+}
+
+.recreational-text-title {
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  color: var(--color-brown);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.recreational-welcome {
+  font-size: 3.99rem;
+  color: var(--color-black-dark);
+}
+.recreational-accomodationly-info,
+.recreational-accomodationly-infos {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  margin: 2rem 0;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+/* Responsive Design */
+@media screen and (max-width: 1270px) {
+  .recreational-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .recreational-container {
+    gap: 9rem;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  .recreational-container {
+    gap: 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recreational-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .recreational-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* End of Recreational Services */
+
+/* Entertainment Services */
+.entertainment-section {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.entertainment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 12rem;
+  margin-right: 3rem;
+  padding-right: 1rem;
+  flex-direction: row;
+}
+
+.entertainment-images-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.entertainment-images-container img {
+  width: 32rem;
+  height: 19rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+img.entertainment-image.swimming {
+  position: relative;
+  bottom: 1.5rem;
+  left: -13rem;
+}
+
+img.entertainment-image.gym {
+  position: absolute;
+  bottom: -10rem;
+  left: 1.5rem;
+  z-index: 1;
+}
+.entertainment-text-container {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70rem;
+  padding-left: 0.5rem;
+  margin-left: -13.4rem;
+  padding-right: 11rem;
+}
+.entertainment-text {
+  padding-top: 0;
+  justify-items: left;
+}
+
+.entertainment-text-title {
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  color: var(--color-brown);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.entertainment-welcome {
+  font-size: 3.99rem;
+  color: var(--color-black-dark);
+}
+.entertainment-accomodationly-info,
+.entertainment-accomodationly-infos {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  margin: 2rem 0;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 1270px) {
+  .entertainment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .entertainment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  .entertainment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .entertainment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .entertainment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+/* End of Entertainment Services */
+
+/* Water Services */
+.water-section {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.water-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 12rem;
+  margin-right: 3rem;
+  padding-right: 1rem;
+  flex-direction: row;
+}
+
+.water-images-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.water-images-container img {
+  width: 32rem;
+  height: 19rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+img.water-image.swimming {
+  position: relative;
+  bottom: 11.3rem;
+  left: -13rem;
+}
+
+img.water-image.gym {
+  position: absolute;
+  bottom: .7rem;
+  left: .5rem;
+  z-index: 1;
+}
+.water-text-container {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70rem;
+  padding-left: 0.5rem;
+  margin-right: -14rem;
+  padding-right: 11rem;
+}
+.water-text {
+  padding-top: 0;
+  justify-items: left;
+}
+
+.water-text-title {
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  color: var(--color-brown);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.water-welcome {
+  font-size: 3.99rem;
+  color: var(--color-black-dark);
+}
+.water-accomodationly-info,
+.water-accomodationly-infos {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  margin: 2rem 0;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 1270px) {
+  .water-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .water-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  .water-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .water-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .water-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+/* End of Water Services */
+
+/* Elevator Services */
+.elevator-section {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+}
+
+.elevator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 12rem;
+  margin-right: 3rem;
+  padding-right: 1rem;
+  flex-direction: row;
+}
+
+.elevator-images-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.elevator-images-container img {
+  width: 32rem;
+  height: 19rem;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+img.elevator-image.swimming {
+  position: relative;
+  bottom: 1.5rem;
+  left: -13rem;
+}
+
+img.elevator-image.gym {
+  position: absolute;
+  bottom: -10rem;
+  left: 1.5rem;
+  z-index: 1;
+}
+.elevator-text-container {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70rem;
+  padding-left: 0.5rem;
+  margin-left: -13.4rem;
+  padding-right: 11rem;
+}
+.elevator-text {
+  padding-top: 0;
+  justify-items: left;
+}
+
+.elevator-text-title {
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  color: var(--color-brown);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.elevator-welcome {
+  font-size: 3.99rem;
+  color: var(--color-black-dark);
+}
+.elevator-accomodationly-info,
+.elevator-accomodationly-infos {
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  margin: 2rem 0;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 1270px) {
+  .elevator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .elevator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 878px) {
+  .elevator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .elevator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .elevator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+}
+/* End of Elevator Services */
+
+
+/* Accomodations Section */
+
+.title {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title--main {
+  font-size: 5.3rem;
+  text-transform: capitalize;
+  color: var(--color-black-strong);
+  text-align: center;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+.accomodations-section {
+  margin-top: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.accomodations-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+}
+
+.accomodation-card {
+  width: 30rem;
+  border-radius: .8rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.accomodation-card-image-wrapper {
+  height: 25rem;
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
+}
+
+.accomodation-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
+}
+
+.accomodation-details {
+  background-color: var(--color-white-cream);
+  padding: 2rem 0;
+  transition: all 0.5s;
+  border-bottom-right-radius: .8rem;
+  border-bottom-left-radius: .8rem;
+  font-family: var(--secondary-font);
+}
+
+.accomodation-card:hover .accomodation-details {
+  background-color: var(--color-primary);
+}
+
+.accomodation-details-price,
+.accomodation-details-title,
+.accomodation-details-author {
+  text-align: left;
+  color: var(--color-grey);
+  padding-left: .7rem;
+}
+
+.accomodation-details-price {
+  transition: all 0.5s;
+}
+span{
+  font-weight: 900;
+  color: var(--color-black-strong);
+  font-size: 2.1rem;
+}
+.accomodation-details-price,
+.accomodation-details-author {
+  font-size: 1.4rem;
+}
+
+.accomodation-card:hover .accomodation-details-price,
+.accomodation-card:hover .accomodation-details-author,
+.accomodation-card:hover .accomodation-details-title {
+  color: var(--color-grey);
+}
+
+.accomodation-details-title {
+  font-size: 2.5rem;
+  color: var(--color-black-dark);
+  text-transform: capitalize;
+  margin: 1rem 0;
+  transition: all 0.5s;
+  font-family: var(--font-secondary);
+}
+
+.accomodation-details-author {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  transition: all 0.5s;
+}
+
+.accomodation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.accomodation-action {
+  text-decoration: none;
+  color: var(--color-green);
+  font-size: 2rem;
+  --accomodation-action-size: 4rem;
+  width: var(--accomodation-action-size);
+  height: var(--accomodation-action-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+/* End of Accomodation Section */
+
+/* Explore More Section */
+.explore-more {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.explore-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-more-link {
+  color: var(--color-blue);
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  text-decoration: underline;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-more-link:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+/* End of Explore Section */
+
+
+/*  Contact Us Section Styling */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: var(--color-grey-bright);
+}
+
+.contact-container {
+  background: var(--color-white);
+  padding: 3rem;
+  width: 40rem;
+  border-radius: .8rem;
+  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+  color: var(--color-black-strong);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--secondary-font);
+  font-size: 1.6rem;
+  color: var(--color-grey);
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border: .1rem solid var(--color-grey-dim);
+  border-radius: .5rem;
+  font-size: 1.4rem;
+}
+
+.contact-form textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.contact-form button {
+  width: 50%;
+  padding: 1.2rem;
+  margin-left: 8.5rem;
+  background: var(--background-color);
+  color: var(--color-bright-white);
+  font-size: 1.9rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--color-blue);
+}
+
+/* End of Contact Us Section */
+
+/* Footer Section Styling */
+.footer {
+  background-color: var(--color-black-strong); 
+  color: var(--color-bright-white); 
+  padding: 4rem 0;
+  font-family: var(--secondary-font);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 10rem;
+  margin: 0 15rem;
+  padding: 0;
+}
+
+.footer-left p {
+  margin: .5rem 0;
+  margin-bottom: .9rem;
+  font-size: 1.4rem;
+}
+
+
+.fa-solid.fa-phone{
+  font-size: 2rem;
+  margin-right: .7rem;
+  cursor: pointer;
+}
+
+.footer-left a {
+  color: var(--color-blue); 
+  text-decoration: underline;
+}
+
+.footer-right {
+  text-align: right;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  color: var(--color-bright-white);
+}
+
+.footer-right a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-bottom: 2rem;
+}
+
+.social-icons a {
+  color: var(--color-bright-white);
+  font-size: 2rem;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--color-bright-white);
+}
+
+/* End of Footer Section */
